@@ -78,4 +78,4 @@ Easily start your RESTful Web Services
 [Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
 
 ## Postman Collection
-[Postman collection link...](https://github.com/JD-Tagline/quarkus-note-app-postman)
+[Postman collection link...](https://github.com/JD-Tagline/quarkus-notes-app/blob/main/Quarkus.postman_collection.json)
