@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "977145e7-1b45-426d-8a03-4fd054c44d07",
+		"name": "Quarkus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43871577"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"user@gmail.com\",\n  \"password\": \"password\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "Create Note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJxdWFya3VzLW5vdGVzLWFwcCIsInN1YiI6InVzZXJAZ21haWwuY29tIiwiZ3JvdXBzIjpbInVzZXIiXSwiZXhwIjoxNzQ2ODY2NDE0NDkxLCJpYXQiOjE3NDY4NjQ2MTQsImp0aSI6IjdhYjcyMTNjLTI1NTUtNGY0Mi1iZTA5LTNkNGRjYjAwM2Q2ZSJ9.rOoVCSdweB2seA21xXuGJY2NcXIa6D0RC8r0fmzl6mi3MZKf09jh8p9-VIyb5qjsu9Hdtwj-cXG8u0WovLKtffs6JN7i6dTCgWIszcOOaHItvcXqly13_oP21vfrdCSIAR8FQ_UoQ738a3zqTQpbBrjlUijxoNLcG5NwFo_gG8woDTZEfrWSJDeJRwmA3sTIi_ENI1V2RAcvH0xVbVKzDcc_tJiGC795mvaKfdlrc9hfqmrS06DGgDAZNX_YPQIAyctFPsVeVgJdPmXj8iExKO2XPRXBxwHP3MdxeupFSwoEzhhaRlssIJRGAn9AyEvSf2OzwHssZXmlisJhoKlx1A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Apple3\",\n    \"body\": \"This is Apple note3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJxdWFya3VzLW5vdGVzLWFwcCIsInN1YiI6InVzZXJAZ21haWwuY29tIiwiZ3JvdXBzIjpbInVzZXIiXSwiaWF0IjoxNzQ2Nzk3NTg5LCJleHAiOjE3NDY3OTc4ODksImp0aSI6IjE1OTc2NWVmLWU4ZTItNDY1Ny1iNTg3LWNiODYwODdhYmVmNCJ9.ldRlLI4RPhJcJvEl-Z4lvgM30XqEBzrJtxGhFwKlocFTiorHcwSx-mrTeAzo2WQmgBbaoEK3KlS0_AezfeI_qPDoxIoicfh-l8A0IDDykPRvgEd4xqLwarqPuLhMZe0IlndiYeSLfb3kWqmCADF1YZEZfW92-MnqCSSXwzOk-T03-3s6R_y73sLuOGi4Ov-CNy67qYaCVM_4zyem-KdsQhqVFJ5D68ih0wQVQ8BpmI04itRkDktkQt-z88BP-VbPgDTL8fMRQWHrM_BuP2Mvx8HbWaUiGzkrq8fC6s10vDsRxRZkAOhYqR2b4eCRGmQrCRT8in29_FeSbaoC9Ey8dA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Apple2\",\n    \"body\": \"This is Apple note2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/notes/831fc83d-5855-465a-8798-7ab80dfdd09f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notes",
+								"831fc83d-5855-465a-8798-7ab80dfdd09f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Notes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJxdWFya3VzLW5vdGVzLWFwcCIsInN1YiI6InVzZXJAZ21haWwuY29tIiwiZ3JvdXBzIjpbInVzZXIiXSwiZXhwIjoxNzQ2ODY1MTAyNjQ0LCJpYXQiOjE3NDY4NjMzMDIsImp0aSI6ImM4OGM4ZjFlLTM3NWEtNGNkMC1hZDAyLWNjYzcyNGJjNTM5NiJ9.HkAip36gNnYbJdxRdyP8E3otAiC_HNNuG9JPZ0PmkCha_iFbYyVZEgUwEcs6vZ7_PeKaGd0otZpu_vmfrEivzTQwMYKI_gbtsPxgft7gBg4AZ-WdIsBANVwcyYuNx7lMgCuIyR7sJX1FVhj05lSPiMsMSjLCDOIn_L7rEM0PPQBDj2jYabIBAJYDsmcCgFONk1C-v9u__MXf34jBxYlrpUm2q22PHKXbrM-kIgHeiUA_r2eVwPJtzXvKrkeCBvX8B0LiySR31BKvMZbU0KGufs53KF__TO5E-HruFBYaXBhaaT4ZRr3VKTR9HHpCFq0zzZc_q6BXNOcszVijoIeSaA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Note By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJxdWFya3VzLW5vdGVzLWFwcCIsInN1YiI6InVzZXJAZ21haWwuY29tIiwiZ3JvdXBzIjpbInVzZXIiXSwiZXhwIjoxNzQ2ODY1MTAyNjQ0LCJpYXQiOjE3NDY4NjMzMDIsImp0aSI6ImM4OGM4ZjFlLTM3NWEtNGNkMC1hZDAyLWNjYzcyNGJjNTM5NiJ9.HkAip36gNnYbJdxRdyP8E3otAiC_HNNuG9JPZ0PmkCha_iFbYyVZEgUwEcs6vZ7_PeKaGd0otZpu_vmfrEivzTQwMYKI_gbtsPxgft7gBg4AZ-WdIsBANVwcyYuNx7lMgCuIyR7sJX1FVhj05lSPiMsMSjLCDOIn_L7rEM0PPQBDj2jYabIBAJYDsmcCgFONk1C-v9u__MXf34jBxYlrpUm2q22PHKXbrM-kIgHeiUA_r2eVwPJtzXvKrkeCBvX8B0LiySR31BKvMZbU0KGufs53KF__TO5E-HruFBYaXBhaaT4ZRr3VKTR9HHpCFq0zzZc_q6BXNOcszVijoIeSaA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/notes/831fc83d-5855-465a-8798-7ab80dfdd09f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notes",
+								"831fc83d-5855-465a-8798-7ab80dfdd09f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Note By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJxdWFya3VzLW5vdGVzLWFwcCIsInN1YiI6InVzZXJAZ21haWwuY29tIiwiZ3JvdXBzIjpbInVzZXIiXSwiaWF0IjoxNzQ2Nzk4MzU5LCJleHAiOjE3NDY3OTg2NTksImp0aSI6ImNjMDc5YjQzLWU3Y2EtNDEyOC1iYmY0LTZlYTdlMjMxNmI1OCJ9.fqEFZz7HL6QtCyjWpPVm9xukO-YkvUMMT6gv1kkd6Q6Wnr_vI3QNq_78Nx_u43J0VR0c5u9DxfLmk1X2bTiSAUYTcHju2Mp-N-8X2zOYPfEWQ6MHDu63T7TNBzjVFidRUj-nxthbaGjeVK-UY2HmxVbzBIUItkdZmSW8-MLha6psaYgKtcv5zEJHELlU2EQC_lTSw6QzO3KYhlb1hcwab1pCybtufmBbHL55tGn3C2mXJ-hptmkP0WQRd5M6nDwp8_pLKSisgLUtCOUNx7aGh99RHJDAJUF1TOBT8UUbOo1hC-HKTgrt2O3Ib4LFIauCczf9oDGVE3Efqnwn6gFZrQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/notes/3682fa18-0fc6-4f38-bc86-7abdaa4b157f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notes",
+								"3682fa18-0fc6-4f38-bc86-7abdaa4b157f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Json Placeholder Client",
+			"item": [
+				{
+					"name": "Get Note With External Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJxdWFya3VzLW5vdGVzLWFwcCIsInN1YiI6InVzZXJAZ21haWwuY29tIiwiZ3JvdXBzIjpbInVzZXIiXSwiZXhwIjoxNzQ2ODY1MTAyNjQ0LCJpYXQiOjE3NDY4NjMzMDIsImp0aSI6ImM4OGM4ZjFlLTM3NWEtNGNkMC1hZDAyLWNjYzcyNGJjNTM5NiJ9.HkAip36gNnYbJdxRdyP8E3otAiC_HNNuG9JPZ0PmkCha_iFbYyVZEgUwEcs6vZ7_PeKaGd0otZpu_vmfrEivzTQwMYKI_gbtsPxgft7gBg4AZ-WdIsBANVwcyYuNx7lMgCuIyR7sJX1FVhj05lSPiMsMSjLCDOIn_L7rEM0PPQBDj2jYabIBAJYDsmcCgFONk1C-v9u__MXf34jBxYlrpUm2q22PHKXbrM-kIgHeiUA_r2eVwPJtzXvKrkeCBvX8B0LiySR31BKvMZbU0KGufs53KF__TO5E-HruFBYaXBhaaT4ZRr3VKTR9HHpCFq0zzZc_q6BXNOcszVijoIeSaA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/notes/with-external/b91b6fb8-7b1d-4884-bc87-168d3ead8c05",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"notes",
+								"with-external",
+								"b91b6fb8-7b1d-4884-bc87-168d3ead8c05"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
